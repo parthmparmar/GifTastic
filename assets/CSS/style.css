@@ -1,0 +1,21 @@
+body {
+    background-image: url(../images/trees.png);
+    font-family: 'Roboto Slab', serif;
+}
+
+.btn {
+    font-family: 'Roboto Slab', serif;
+}
+
+header {
+    font-family: 'Permanent Marker', cursive;
+    color: coral;
+}
+
+label {
+    color: coral;
+}
+
+.off {
+    display: none;
+}
