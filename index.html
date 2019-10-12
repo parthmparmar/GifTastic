@@ -20,30 +20,29 @@
             </header>
         </div>
         <div class="row border-bottom border-primary p-3">
-            <div class="col-md-12 button-display">
-                <button id="btn-setup" class="btn btn-secondary off m-2"> TEST </button>
+            <div class="col-md-8 button-display">
+                <button class="btn btn-secondary off m-2"> TEST </button>
             </div>
-        </div>
-        <div class="row p-3">
-            <div class="col-md-8">
-                <div class="gif-display">
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/images/circle-blues.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <p id="rating" class="card-text">Rating: </p>
-                              <p id ="info" class="card-text">Other Info:</p>
-                            </div>
-                        </div>
-                </div>
-            </div>
-            <div class="col-md 4">
-                <form>
+            <div class="col-md 4 search-form">
+                <form class="input-form">
                     <div class="form-group">
                         <label class= "font-weight-bold" for="animal-input"><h4>Add an Animal</h4></label>
                         <input type="text" class="form-control form-control-lg" id="animal-input" placeholder="">
                     </div>
                     <button id="add" type="button" class="btn btn-info">Submit</button>
                 </form>
+            </div>
+        </div>
+        <div class="row p-3">
+            <div class="col-md-12">
+                <div class="gif-display row">
+                        <div class="card m-1 mr-4 col-md-3 off" style="width: 18rem;">
+                            <img src="assets/images/circle-blues.png" class="card-img-top mt-3" alt="...">
+                            <div class="card-body">
+                              <p id="rating" class="card-text">Rating: </p>
+                            </div>
+                        </div>
+                </div>
             </div>
         </div>
     </div>

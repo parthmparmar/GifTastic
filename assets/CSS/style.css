@@ -19,3 +19,11 @@ label {
 .off {
     display: none;
 }
+
+.search-form {
+    border-left: 1px solid #0275d8;
+}
+
+.card {
+    background-color: rgba(245, 245, 245, 0.5);
+}
