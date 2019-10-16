@@ -6,6 +6,12 @@ var buttonDisplay = $(".button-display");
 var cardSetup = $(".card")
 var gifDisplay = $(".gif-display")
 
+function load_fav_btn(){
+    button_array = JSON.parse(window.localStorage.getItem('fav_array'));
+}
+
+load_fav_btn();
+
 function add_button(button_name, add_to){
     var newBtn = btnSetup.clone(true);
     newBtn.attr("data-item", button_name);
@@ -31,7 +37,7 @@ for (var i = 0; i < button_array.length; i++) {
 
 $(".btn-secondary").on("click", function (){
     var animalName = $(this).attr("data-item");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=7cDSLMzhZcERGBKhmFgrnnS0pg9sAEtR&q=" + animalName + "&limit=25&offset=0&lang=en";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=7cDSLMzhZcERGBKhmFgrnnS0pg9sAEtR&q=" + animalName + "&limit=10&offset=0&lang=en";
     $.ajax({url: queryURL, method: "GET"}).then(function(results){
         console.log(results)
         for (var i = 0; i < 11; i++){
@@ -45,6 +51,15 @@ $(".btn-secondary").on("click", function (){
 
 $("#add").on("click", function (){
     var add_name = $("#animal-input").val().trim()
+    if (add_name != "") {
+        add_button(add_name, buttonDisplay);
+    }
+});
+
+$("#add-fav").on("click", function(){
+    var add_name = $("#animal-input").val().trim()
+    button_array.push(add_name);
+    window.localStorage.setItem("fav_array", JSON.stringify(button_array));
     if (add_name != "") {
         add_button(add_name, buttonDisplay);
     }
