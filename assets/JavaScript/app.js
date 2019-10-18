@@ -7,8 +7,12 @@ var cardSetup = $(".card")
 var gifDisplay = $(".gif-display")
 
 function load_fav_btn(){
-    button_array = JSON.parse(window.localStorage.getItem('fav_array'));
+    var saved_array = JSON.parse(window.localStorage.getItem('fav_array'));
+    if (saved_array !== null && saved_array !== "") {
+        button_array = saved_array
+    }
 }
+
 
 load_fav_btn();
 
@@ -28,7 +32,7 @@ function add_gif (stillLinkInput, playLinkInput, ratingInput, addTo) {
     newCard.removeClass("off");
     newCard.children().attr("src", stillLinkInput);
     newCard.find("#rating").text("Raiting: "+ ratingInput);
-    addTo.append(newCard)
+    addTo.prepend(newCard)
 }
 
 for (var i = 0; i < button_array.length; i++) {
