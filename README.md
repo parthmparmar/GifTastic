@@ -1,5 +1,8 @@
 # GifTastic
 
+###
+Deployed Link: https://parthmparmar.github.io/GifTastic/
+
 ### Overview
 
 In the website the user is clicks on predefined buttons or buttons from favorite list to get 10 still gifs.  The gifs can be played by clicking on the still image and paused by clicking on it again.  
